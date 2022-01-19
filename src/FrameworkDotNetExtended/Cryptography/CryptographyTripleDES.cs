@@ -4,11 +4,11 @@ using System.Text;
 
 namespace FrameworkDotNetExtended.Criptografia
 {
-    public class CriptografiaTripleDES
+    public class CryptographyTripleDES
     {
         public string Key { get; set; }
 
-        public CriptografiaTripleDES(string key)
+        public CryptographyTripleDES(string key)
         {
             this.Key = key;
         }

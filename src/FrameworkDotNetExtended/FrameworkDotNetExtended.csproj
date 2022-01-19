@@ -64,9 +64,9 @@
     <Compile Include="Compression\Files\CompressedFile.cs" />
     <Compile Include="Compression\Files\CompressedFileDiskStored.cs" />
     <Compile Include="Compression\Files\CompressedFileMemory.cs" />
-    <Compile Include="Criptografia\CriptografiaAES.cs" />
-    <Compile Include="Criptografia\CriptografiaFake.cs" />
-    <Compile Include="Criptografia\CriptografiaTripleDES.cs" />
+    <Compile Include="Cryptography\CryptographyAES.cs" />
+    <Compile Include="Cryptography\CryptographyFake.cs" />
+    <Compile Include="Cryptography\CryptographyTripleDES.cs" />
     <Compile Include="Entities\AnoMes.cs" />
     <Compile Include="Entities\ChaveDescricaoDTO.cs">
       <SubType>Code</SubType>
@@ -100,9 +100,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Files\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

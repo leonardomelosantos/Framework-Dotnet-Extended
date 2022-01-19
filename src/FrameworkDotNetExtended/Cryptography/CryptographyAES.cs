@@ -5,7 +5,7 @@ using System.Text;
 
 namespace FrameworkDotNetExtended.Criptografia
 {
-    public abstract class CriptografiaAES
+    public abstract class CryptographyAES
     {
         public enum HashAlgorithmTypes
         {

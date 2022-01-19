@@ -3,7 +3,7 @@ using System.Text;
 
 namespace FrameworkDotNetExtended.Criptografia
 {
-    public class CriptografiaFake
+    public class CryptographyFake
     {
         public static string Decrypt(string encrypt)
         {
