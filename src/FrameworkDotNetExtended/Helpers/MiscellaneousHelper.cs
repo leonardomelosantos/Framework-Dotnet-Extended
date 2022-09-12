@@ -36,59 +36,33 @@ namespace FrameworkDotNetExtended.Helpers
 
         public static int QuantidadeDiasMes(int ano, int mes)
         {
-            int dias;
-
             switch (mes)
             {
-                case 1:
-                    dias = 31;
-                    break;
                 case 2:
                     if (Convert.ToInt32(ano.ToString().Substring(2, 2)) % 4 == 0)
                     {
-                        dias = 29;
+                        return 29;
                     }
                     else
                     {
-                        dias = 28;
+                        return 28;
                     }
-                    break;
+                case 1:    
                 case 3:
-                    dias = 31;
-                    break;
-                case 4:
-                    dias = 30;
-                    break;
                 case 5:
-                    dias = 31;
-                    break;
-                case 6:
-                    dias = 30;
-                    break;
                 case 7:
-                    dias = 31;
-                    break;
                 case 8:
-                    dias = 31;
-                    break;
-                case 9:
-                    dias = 30;
-                    break;
                 case 10:
-                    dias = 31;
-                    break;
-                case 11:
-                    dias = 30;
-                    break;
                 case 12:
-                    dias = 31;
-                    break;
+                    return 31;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    return 30;
                 default:
-                    dias = 31;
-                    break;
+                    return 31;
             }
-
-            return dias;
         }
 
         /// <summary>
@@ -175,51 +149,35 @@ namespace FrameworkDotNetExtended.Helpers
 
         public static string GetMesExtenso(int mes)
         {
-            string mesExtenso = string.Empty;
-
             switch (mes)
             {
                 case 1:
-                    mesExtenso = "Janeiro";
-                    break;
+                    return "Janeiro";
                 case 2:
-                    mesExtenso = "Fevereiro";
-                    break;
+                    return "Fevereiro";
                 case 3:
-                    mesExtenso = "Março";
-                    break;
+                    return "Março";
                 case 4:
-                    mesExtenso = "Abril";
-                    break;
+                    return "Abril";
                 case 5:
-                    mesExtenso = "Maio";
-                    break;
+                    return "Maio";
                 case 6:
-                    mesExtenso = "Junho";
-                    break;
+                    return "Junho";
                 case 7:
-                    mesExtenso = "Julho";
-                    break;
+                    return "Julho";
                 case 8:
-                    mesExtenso = "Agosto";
-                    break;
+                    return "Agosto";
                 case 9:
-                    mesExtenso = "Setembro";
-                    break;
+                    return "Setembro";
                 case 10:
-                    mesExtenso = "Outubro";
-                    break;
+                    return "Outubro";
                 case 11:
-                    mesExtenso = "Novembro";
-                    break;
+                    return "Novembro";
                 case 12:
-                    mesExtenso = "Dezembro";
-                    break;
+                    return "Dezembro";
                 default:
                     throw new Exception("@Mês inválido.@");
             }
-
-            return mesExtenso;
         }
 
         #endregion Data
