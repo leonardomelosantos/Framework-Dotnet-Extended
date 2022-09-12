@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FrameworkDotNetExtended.Extensions
 {
@@ -44,7 +40,6 @@ namespace FrameworkDotNetExtended.Extensions
         /// <returns></returns>                
         public static string FormatarData(this DateTime data, FormatoData formatoData)
         {
-            string dataRetornada = string.Empty;
             string mascara = string.Empty;
 
             switch (formatoData)
@@ -97,14 +92,10 @@ namespace FrameworkDotNetExtended.Extensions
 
             if (formatoData == FormatoData.DiaSemanaDDMesYY || formatoData == FormatoData.DiaSemanaDDMesYYYY)
             {
-                dataRetornada = data.ToString(mascara).Replace("{0}", "de");
-            }
-            else
-            {
-                dataRetornada = data.ToString(mascara);
+                return data.ToString(mascara).Replace("{0}", "de");
             }
 
-            return dataRetornada;
+            return data.ToString(mascara);
         }
     }
 }

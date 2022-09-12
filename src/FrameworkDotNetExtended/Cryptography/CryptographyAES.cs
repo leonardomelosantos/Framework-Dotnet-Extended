@@ -30,7 +30,7 @@ namespace FrameworkDotNetExtended.Criptografia
             {
                 return initVertor.PadRight(16, '0');
             }
-            
+
             if (initVertor.Length > 16)
             {
                 return initVertor.Substring(0, 16);
@@ -47,7 +47,7 @@ namespace FrameworkDotNetExtended.Criptografia
         // Valores possíveis: "SHA1" ou "MD5"
         protected virtual HashAlgorithmTypes GetHashAlgorithm()
         {
-            return HashAlgorithmTypes.MD5; 
+            return HashAlgorithmTypes.MD5;
         }
 
         // Valores possíveis: 192 ou 128
@@ -71,12 +71,12 @@ namespace FrameworkDotNetExtended.Criptografia
         public string Encrypt(string conteudoASerEncriptado)
         {
             ValidateSettings();
-            return Encrypt(conteudoASerEncriptado, 
-                GetPassPhrase(), 
+            return Encrypt(conteudoASerEncriptado,
+                GetPassPhrase(),
                 GetSaltValue(),
-                GetHashAlgorithm().ToString(), 
-                GetPasswordIterations(), 
-                GetInitVector(), 
+                GetHashAlgorithm().ToString(),
+                GetPasswordIterations(),
+                GetInitVector(),
                 (int)GetKeySize());
         }
 

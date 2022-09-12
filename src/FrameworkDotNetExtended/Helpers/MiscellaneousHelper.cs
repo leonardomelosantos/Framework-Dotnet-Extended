@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace FrameworkDotNetExtended.Helpers
 {
@@ -38,11 +36,12 @@ namespace FrameworkDotNetExtended.Helpers
 
         public static int QuantidadeDiasMes(int ano, int mes)
         {
-            int dias; 
+            int dias;
 
             switch (mes)
             {
-                case 1: dias = 31;
+                case 1:
+                    dias = 31;
                     break;
                 case 2:
                     if (Convert.ToInt32(ano.ToString().Substring(2, 2)) % 4 == 0)
@@ -54,25 +53,35 @@ namespace FrameworkDotNetExtended.Helpers
                         dias = 28;
                     }
                     break;
-                case 3: dias = 31;
+                case 3:
+                    dias = 31;
                     break;
-                case 4: dias = 30;
+                case 4:
+                    dias = 30;
                     break;
-                case 5: dias = 31;
+                case 5:
+                    dias = 31;
                     break;
-                case 6: dias = 30;
+                case 6:
+                    dias = 30;
                     break;
-                case 7: dias = 31;
+                case 7:
+                    dias = 31;
                     break;
-                case 8: dias = 31;
+                case 8:
+                    dias = 31;
                     break;
-                case 9: dias = 30;
+                case 9:
+                    dias = 30;
                     break;
-                case 10: dias = 31;
+                case 10:
+                    dias = 31;
                     break;
-                case 11: dias = 30;
+                case 11:
+                    dias = 30;
                     break;
-                case 12: dias = 31;
+                case 12:
+                    dias = 31;
                     break;
                 default:
                     dias = 31;
@@ -170,32 +179,44 @@ namespace FrameworkDotNetExtended.Helpers
 
             switch (mes)
             {
-                case 1: mesExtenso = "Janeiro";
+                case 1:
+                    mesExtenso = "Janeiro";
                     break;
-                case 2: mesExtenso = "Fevereiro";
+                case 2:
+                    mesExtenso = "Fevereiro";
                     break;
-                case 3: mesExtenso = "Março";
+                case 3:
+                    mesExtenso = "Março";
                     break;
-                case 4: mesExtenso = "Abril";
+                case 4:
+                    mesExtenso = "Abril";
                     break;
-                case 5: mesExtenso = "Maio";
+                case 5:
+                    mesExtenso = "Maio";
                     break;
-                case 6: mesExtenso = "Junho";
+                case 6:
+                    mesExtenso = "Junho";
                     break;
-                case 7: mesExtenso = "Julho";
+                case 7:
+                    mesExtenso = "Julho";
                     break;
-                case 8: mesExtenso = "Agosto";
+                case 8:
+                    mesExtenso = "Agosto";
                     break;
-                case 9: mesExtenso = "Setembro";
+                case 9:
+                    mesExtenso = "Setembro";
                     break;
-                case 10: mesExtenso = "Outubro";
+                case 10:
+                    mesExtenso = "Outubro";
                     break;
-                case 11: mesExtenso = "Novembro";
+                case 11:
+                    mesExtenso = "Novembro";
                     break;
-                case 12: mesExtenso = "Dezembro";
+                case 12:
+                    mesExtenso = "Dezembro";
                     break;
                 default:
-                    throw new Exception("@Mês inválido.@");                    
+                    throw new Exception("@Mês inválido.@");
             }
 
             return mesExtenso;
@@ -204,7 +225,7 @@ namespace FrameworkDotNetExtended.Helpers
         #endregion Data
 
         #region UtilDiversos
-                
+
         /// <summary>
         /// Método que obtem um valor de um objeto, serve para tratar os valores nulos.
         /// </summary>
@@ -292,8 +313,8 @@ namespace FrameworkDotNetExtended.Helpers
 
             return valorRetornado;
         }
-        
-        
+
+
 
         /// <summary>
         /// Método para tratar as mensagens de exceçao
@@ -301,7 +322,7 @@ namespace FrameworkDotNetExtended.Helpers
         /// <param name="msg"></param>
         /// <returns></returns>
         public static string TratarMsgException(string msg, Dictionary<string, string> valoresException, string stackTrace)
-        {         
+        {
             string[] msgs = msg.Split('@');
             string msgFinal = string.Empty;
 
@@ -327,7 +348,7 @@ namespace FrameworkDotNetExtended.Helpers
                 {
                     msgFinal = "Ocorreu um erro inesperado, tente novamente ou entre em contato com uma de nossas unidades.";
                 }
-                
+
                 //string erroIgnorado1 = "aborted";
                 //string erroIgnorado2 = "timed out";
 
@@ -424,7 +445,7 @@ namespace FrameworkDotNetExtended.Helpers
                 }
 
                 //FuncoesEmail.EnviarEmail("Msg Erro Site", "leonardomelosantos@gmail.com", msg, true, string.Empty);
-            }            
+            }
 
             return msgFinal;
         }
@@ -551,7 +572,7 @@ namespace FrameworkDotNetExtended.Helpers
 
             return valido;
         }
-        
+
 
         /// <summary>
         /// Verifica se as strings são nulas ou vazias.
@@ -582,7 +603,7 @@ namespace FrameworkDotNetExtended.Helpers
 
         #region Formatação
 
-        
+
 
         /// <summary>
         /// Método que formata o número de acordo com o tipo de formatação escolhida
@@ -703,5 +724,5 @@ namespace FrameworkDotNetExtended.Helpers
         }
 
         #endregion Manipulação de arquivos
-    }    
+    }
 }

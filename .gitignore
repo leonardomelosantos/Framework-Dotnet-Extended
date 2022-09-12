@@ -5,3 +5,8 @@
 /.vs
 *.user
 /src/.vs/FrameworkDotNetExtended/v16/.suo
+/src/FrameworkDotNetExtended/obj/Debug
+/src/.vs/FrameworkDotNetExtended/FileContentIndex
+/src/FrameworkDotNetExtended/bin/Debug
+/src/.vs/FrameworkDotNetExtended/v17
+/src/packages
