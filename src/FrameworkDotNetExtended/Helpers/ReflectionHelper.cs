@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FrameworkDotNetExtended.Helpers
 {
@@ -17,7 +13,6 @@ namespace FrameworkDotNetExtended.Helpers
         /// <returns>objeto com valor dos atributos e metadados da propriedade</returns>
         public static Object ObterValorPropriedade(Object o, string propriedade)
         {
-            Type tipoObjeto = o.GetType();
             PropertyInfo propertyInfo;
             Object retorno = o;
             string nomePropriedade;
@@ -25,7 +20,7 @@ namespace FrameworkDotNetExtended.Helpers
 
             do
             {
-                tipoObjeto = retorno.GetType();
+                Type tipoObjeto = retorno.GetType();
 
                 if (posicaoPonto > -1)
                 {

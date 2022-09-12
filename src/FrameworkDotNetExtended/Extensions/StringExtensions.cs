@@ -216,7 +216,7 @@ namespace System
 
                         digito = resto.ToString();
 
-                        tempCpf = tempCpf + digito;
+                        tempCpf += digito;
 
                         soma = 0;
                         for (int i = 0; i < 10; i++)
@@ -228,7 +228,7 @@ namespace System
                         else
                             resto = 11 - resto;
 
-                        digito = digito + resto.ToString();
+                        digito += resto.ToString();
 
                         valido = cpf.EndsWith(digito);
                     }
@@ -238,8 +238,6 @@ namespace System
             {
                 valido = false;
             }
-
-
             return valido;
         }
 
@@ -279,7 +277,7 @@ namespace System
 
                     digito = resto.ToString();
 
-                    tempCnpj = tempCnpj + digito;
+                    tempCnpj += digito;
                     soma = 0;
                     for (int i = 0; i < 13; i++)
                         soma += Int32.Parse(tempCnpj[i].ToString()) * multiplicador2[i];
@@ -290,7 +288,7 @@ namespace System
                     else
                         resto = 11 - resto;
 
-                    digito = digito + resto.ToString();
+                    digito += resto.ToString();
 
                     valido = cnpj.EndsWith(digito);
                 }
